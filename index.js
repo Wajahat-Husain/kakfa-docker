@@ -9,7 +9,7 @@ const jsonParser = bodyParser.json()
 app.post('/api/send', jsonParser, constrollers.sendMessageToKafka);
 
 //consume from topic "test-topic"
-kafkaConfig.consume('my-topic', (data) => {
+kafkaConfig.consume('kafka-topic', (data) => {
 
   console.log('consuming message...')
   console.log(`key : ${data.key}`);
