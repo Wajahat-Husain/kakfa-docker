@@ -12,7 +12,7 @@ const sendMessageToKafka = async (req, res) => {
                 }
             }
         ]
-        kafkaConfig.produce("my-topic", messages);
+        kafkaConfig.produce("kafka-topic", messages);
         res.status(200).json({ status: "Ok!", message: "Message successfully send!" })
 
     } catch (e) {
